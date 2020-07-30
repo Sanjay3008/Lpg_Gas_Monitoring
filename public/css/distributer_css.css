@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ECDCF6;
+}
+
+.wrapper {
+    margin: 10px;
+}
+
+.wrapper .top_navbar {
+    width: calc(100% - 20px);
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 10px;
+}
+
+.wrapper .top_navbar .hamburger {
+    width: 70px;
+    height: 100%;
+    background: #8929e1;
+    padding: 15px 17px;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+}
+
+.wrapper .top_navbar .hamburger div {
+    width: 35px;
+    height: 4px;
+    background: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.wrapper .top_navbar .top_menu {
+    width: calc(100% - 70px);
+    background: #fff;
+    height: 100%;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0, 1);
+
+}
+
+.wrapper .top_navbar .top_menu .logo {
+    color: #800080;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.wrapper .top_navbar .top_menu ul {
+    display: flex
+}
+
+.wrapper .top_navbar .top_menu ul li a {
+    display: block;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    border: 1.4px solid #c290f0;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    color: #af6eeb;
+    cursor: pointer
+}
+
+.wrapper .top_navbar .top_menu ul li a:hover {
+    background: #dfc4f7;
+    color: #fff;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    background: #8929e1;
+    width: 220px;
+    height: calc(100% - 80px);
+    border-bottom-left-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.wrapper .sidebar ul li a {
+    display: block;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 1px;
+    color: #FFFAF0;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.wrapper .sidebar ul li a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #FFFAF0;
+    display: none;
+    cursor: pointer;
+}
+
+.wrapper .sidebar ul li a span.icon {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ulli a span.title {
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active {
+    background: #c975b8;
+    color: #fff;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before {
+    display: block;
+}
+
+.wrapper .main_container {
+    width: calc(100% - 200px);
+    margin-top: 70px;
+    margin-left: 220px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .main_container .item {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 40dp
+        
+}
+
+.collapse_side .sidebar {
+    width: 70px;
+}
+
+.collapse_side .sidebar ul li a {
+    text-align: center;
+}
+
+.collapse_side .sidebar ul li a span.icon {
+    margin: 0;
+}
+
+.collapse_side .sidebar ul li a span.title {
+    display: none;
+}
+
+.collapse_side .main_container {
+    margin-left: 70px;
+}
+
+h3 {
+    text-align: center;
+}
+
+/*
+.name{
+    width: 100px;;
+}
+*/
+td{
+    width: 50%;
+}
+tr{
+    width: 40%;
+}
+table.dataTable tbody th,
+table.dataTable tbody td {
+    white-space: nowrap;
+}
+form{
+    margin-left: 250px;
+}

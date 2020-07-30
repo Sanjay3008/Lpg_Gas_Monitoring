@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-6 reg-image">
+            <img src="images/signup.jpg" class="img-responsive">
+        </div>
+        <div class="col-sm-6 con-reg">
+            <%- include("./partials/msg") %>
+            <ul class="nav nav-tabs reg-tab highlight" id="myTab" role="tablist">
+                <li class="nav-item active">
+                    <a class="nav-link" id="signin-user" data-toggle="tab" href="#user" role="tab">SIGN UP AS USER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="signin-distributer" data-toggle="tab" href="#distributer" role="tab" aria-controls="settings" aria-selected="false">SIGN UP AS DISTRIBUTOR</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane <%= class1 %>" role="tabpanel" id="user">
+                    <div class="form-box-reg">
+                        <form action="/register_user" class="input-group user-form" method="post" autocomplete="off">
+                            <input type="name" class="input-field" name="user_firstname" placeholder="Enter your Firstname" value="<%= typeof user_firstname != 'undefined' ? user_firstname:''%>" required>
+                            <input type="name" class="input-field" name="user_lastname" placeholder="Enter your Lastname" value="<%= typeof user_lastname != 'undefined' ? user_lastname:''%>" required>
+                            <input type="text" class="input-field" name="user_address" placeholder="Enter Your Address" value="<%= typeof user_address != 'undefined' ? user_address:''%>" required>
+                            <input type="text" class="input-field" name="user_country" placeholder="Enter Your Country" value="<%= typeof user_address != 'undefined' ? user_country:''%>" required>
+                            <input type="text" class="input-field" name="user_state" placeholder="Enter Your State" value="<%= typeof user_address != 'undefined' ? user_state:''%>" required>
+                            <input type="text" class="input-field" name="user_city" placeholder="Enter Your City" value="<%= typeof user_address != 'undefined' ? user_city:''%>" required>
+                            <input type="tel" maxlength="10" class="input-field" name="user_phoneno" placeholder="Phone No" value="<%= typeof user_phoneno != 'undefined' ? user_phoneno:''%>" required>
+                            <input type="email" class="input-field" name="user_email" placeholder="Enter your mail" value="<%= typeof user_email != 'undefined' ? user_email:''%>" required>
+                            <input type="password" class="input-field" name="user_pass1" placeholder="Enter your Password" value="<%= typeof user_pass1 != 'undefined' ? user_pass1:''%>" required>
+                            <input type="password" class="input-field" name="user_pass2" placeholder="Re Enter your Password" value="<%= typeof user_pass2 != 'undefined' ? user_pass2:''%>" required>
+                            <input type="text" class="input-field" name="user_gasno" placeholder="Enter Your Gas Connection No" value="<%= typeof user_gasno!= 'undefined' ? user_gasno:''%>" required>
+                            <button type="submit" class="submit-btn-user-reg" name="user_submit" value="user">SIGN UP AS USER</button>
+                            <a href="login" class="already_reg">Already Registered? Login here</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane <%= class2 %>" role="tabpanel" id="distributer">
+                    <div class="form-box-reg">
+                        <form class="input-group distributer-form" action="/register_distributer" method="post" autocomplete="off">
+                            <input type="text" class="input-field" name="distributer_firstname" placeholder="Enter your Firstname" value="<%= typeof distributer_firstname != 'undefined' ? distributer_firstname:''%>" required>
+                            <input type="text" class="input-field" name="distributer_lastname" placeholder="Enter your Lastname" value="<%= typeof distributer_lastname != 'undefined' ? distributer_lastname:''%>" required>
+                            <input type="text" class="input-field" name="distributer_address" placeholder="Enter Your Address" value="<%= typeof distributer_address != 'undefined' ? distributer_address:''%>" required>
+                            <input type="text" class="input-field" name="distributer_country" placeholder="Enter Your Country" value="<%= typeof user_address != 'undefined' ? user_country:''%>" required>
+                            <input type="text" class="input-field" name="distributer_state" placeholder="Enter Your State" value="<%= typeof user_address != 'undefined' ? user_state:''%>" required>
+                            <input type="text" class="input-field" name="distributer_city" placeholder="Enter Your City" value="<%= typeof user_address != 'undefined' ? user_city:''%>" required>
+                            <input type="tel" class="input-field" name="distributer_phoneno" placeholder="Phone No" maxlength="10" value="<%= typeof distributer_phoneno != 'undefined' ? distributer_phoneno:''%>" required>
+                            <input type="email" class="input-field" name="distributer_email" placeholder="Enter your mail" value="<%= typeof distributer_email != 'undefined' ? distributer_email:''%>" required>
+                            <input type="password" class="input-field" name="distributer_pass1" placeholder="Enter your Password" value="<%= typeof distributer_pass1 != 'undefined' ? distributer_pass1:''%>" required>
+                            <input type="password" class="input-field" name="distributer_pass2" placeholder="Re Enter your Password" value="<%= typeof distributer_pass2 != 'undefined' ? distributer_pass2:''%>" required>
+                            <button type="submit" class="submit-btn" name="distributer_submit" value="distributer">SIGN UP AS DISTRIBUTOR</button>
+                            <a href="login" class="already_reg">Already Registered? Login here</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>

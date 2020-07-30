@@ -1,0 +1,246 @@
+body {
+    background-color: #F08080;
+    font-family: sans-serif;
+}
+
+.project {
+    color: #fff;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(246, 98, 128, 1) 0%, rgba(248, 129, 135, 1) 98.3%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 98%;
+    height: 50px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 10px rgba(0, 0, 0, 0.3);
+    border: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+}
+
+.reg-image {
+    margin-top: 100px;
+}
+
+.img-responsive {
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: 50px;
+    border-radius: 40px;
+}
+
+.img-responsive-login {
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+    border-radius: 50px;
+}
+
+a active {
+    background-color: burlywood;
+}
+
+.nav-tabs {
+    width: 404.5px;
+}
+
+.reg-tab {
+    width: 415.6px;
+}
+
+/* when not active use specificity to override the !important on border-(color) */
+#myTab li a {
+    border-radius: 10px 10px 0 0;
+    background: #C8CDF0;
+    border-color: black;
+    border-style: solid;
+
+}
+
+.tab-pane {
+    width: 404px;
+    height: 28px;
+}
+
+.con {
+    padding-top: 80px;
+    display: block;
+}
+
+.con-reg {
+    padding-left: 30px;
+    padding-top: 15px;
+    align-content: center;
+}
+
+#signin-user {
+    background-color: #FFf
+}
+
+
+#signin-distributer {
+    background-color: #fff;
+    margin-left: 5px;
+}
+
+.form-box {
+    width: 402px;
+    height: 290px;
+    position: absolute;
+    background: #fff;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 3px;
+}
+
+.form-box-reg {
+    width: 414px;
+    height: 575px;
+    position: absolute;
+    background: #fff;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    margin-top 1px;
+}
+
+.input-group {
+    top: 20px;
+    position: absolute;
+    width: 380px;
+
+}
+
+.input-field {
+    width: 100%;
+    margin-left: 11px;
+    padding: 8px;
+    border-top: 10px;
+    margin-top: 2px;
+    align-content: center;
+    border-right: 0;
+    border-left: 0;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 60%;
+    align-self: center;
+    margin-left: 75px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+.submit-btn-user-reg {
+    width: 60%;
+    align-self: center;
+    margin-left: 75px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.submit-btn {
+    background-image: linear-gradient(to right, #FFAFBD 0%, #ffc3a0 51%, #FFAFBD 100%)
+}
+
+.submit-btn > :hover {
+    background-position: right center;
+}
+
+.submit-btn-user-reg {
+    background-image: linear-gradient(to right, #FFAFBD 0%, #ffc3a0 51%, #FFAFBD 100%)
+}
+
+.submit-btn-user-reg > :hover {
+    background-position: right center;
+}
+
+.check-box margin-top: 100px;
+
+
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    border: 68px;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.google {
+    margin-top: 80px;
+}
+
+.gp {
+    width: 100%;
+    text-align: center;
+    border-radius: 50%;
+    outline: none;
+    margin-top: 200px;
+
+}
+
+.gp-reg {
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    margin-top: 450px;
+    margin-left: 180px;
+}
+
+.gp-reg-user {
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    margin-top: 460px;
+    margin-left: 180px;
+}
+
+p {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.tab-content {
+    width: 356px;
+    border-radius: 10px;
+}
+
+a {
+    color: black;
+}
+
+img {
+    width: 80%;
+}
+
+.alert-box {
+    width: 70%;
+}
+
+.alert-box-success {
+    width: 95%;
+}
+
+.alert-box-failure {
+    width: 95%;
+}
+
+.already_reg {
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (max-width:991px) {
+    .con-reg {
+        text-align: center;
+        left: 5%;
+        right: 15%;
+    }
+
+    .reg-image {
+        text-align: center;
+        left: 5%;
+        right: 5%;
+    }
+}
